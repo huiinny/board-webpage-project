@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+ 
+<form action="/delete/<%=rows.id%>" method="post">
+    <button type="submit">삭제</button>
+    <table border="1">
+        <input type="hidden" name="id" value="<%=rows.id%>"/>
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" name="author" id="author" value="<%=rows.author%>" required/></td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="title" id="title" value="<%=rows.title%>" required/></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td><textarea name="content" id="content" cols="30" rows="10" required><%=rows.content%></textarea></td>
+        </tr>
+        <tr>
+            <td>등록일</td>
+            <td><%=rows.time%></td>
+        </tr>
+       
+    </table>
+    <a href="#" onclick="history.back(-1)">돌아가기</a>
+
+</form>
+</body>
+</html>
