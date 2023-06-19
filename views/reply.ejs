@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<table border="1">
+    <tr></tr>
+        <td>댓글작성자</td>
+        <td>댓글내용</td>
+        <td>등록일</td>   
+       
+    </tr>
+    <%
+    for(var i=0; i<rrows.length; i++)
+    {
+        var dataa = rrows[i];
+    %>
+    <tr>
+        <td><%=dataa.writer%></td>
+        <td><%=dataa.content%></td>
+        <td><%=dataa.time%></td>
+        
+    </tr>
+    <%}%>
+    </tr>
+</table> 
+</body>
+</html>
